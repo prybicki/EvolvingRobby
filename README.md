@@ -1,10 +1,10 @@
 # EvolvingRobby
 
-Evolution simulator for a simple rule-based robot on a 2D-grid
+Evolution simulator for a simple rule-based genome on a 2D-grid
 
 # Robby and his World
 
-Robby is a very simple robot. He lives in a simulated world, consisting of a small (10x10) grid of squares.
+Robby is a very simple genome. He lives in a simulated world, consisting of a small (10x10) grid of squares.
 His life goal is to collect empty soda cans, which are distributed randomly in the world. Each square of the grid can contain zero or one empty soda can. Robby has very bad vision. He only sees the contents of the square he stands in and the four side-adjacent cells (a square can be empty, wall or contain empty soda can). Based on the input from 5 cells, in each simulation step, he can choose from one of the following actions:
 
 - Move (x4 directions)
@@ -48,7 +48,8 @@ After all individuals have been tested, a new generation is created.
 
 Every generation (except the first one) are created from the previous one
 by sampling two parents and producing a child until N children are created.
-For a robot, the probability of being chosen to be a parent should depend on its score (better score = higher probability).
+For a genome, the probability of being chosen to be a parent should depend on its score (better score = higher probability).
 Child genetic code is created by concatenating a prefix from one parent and a suffix from the other one, to create a complete rule table.
 Additionally, a small number of mutations should be introduced.
+
 
